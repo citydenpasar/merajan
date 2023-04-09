@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Denah 200 Tombol Flexbox</title>
+        <style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			margin: 5px;
+		}
+
+		.button {
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin: 5px;
+			border: none;
+			border-radius: 50%;
+			background-color: #3498db;
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Generate 200 button dengan menggunakan perulangan for pada template -->
+            {% for i in range(1, 201) %}
+                {% if forloop.counter0|divisibleby:10 %}
+                    {% if forloop.counter0 != 0 %}</div>{% endif %}
+                    <div class="row">
+                    {% endif %}
+                    {% if i < 10 %}
+                        {% with "000"|add:i as button_class %}
+                            <button class="button{{ button_class }}">{{ button_class }}</button>
+                        {% endwith %}
+                    {% elif i < 100 %}
+                        {% with "00"|add:i as button_class %}
+                            <button class="button{{ button_class }}">{{ button_class }}</button>
+                        {% endwith %}
+                    {% else %}
+                        {% with i as button_class %}<button class="button{{ button_class }}">{{ button_class }}</button>{% endwith %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
