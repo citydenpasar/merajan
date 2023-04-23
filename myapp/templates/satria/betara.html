@@ -11,171 +11,31 @@
 
                     
                 </div>
-
+                
                 <div class="owl-carousel owl-theme">
+                    {% for betara in betara_list %}
                     <div class="owl-carousel-info-wrap item">
-                        <img src="{% static 'images/profile/smiling-business-woman-with-folded-hands-against-white-wall-toothy-smile-crossed-arms.jpg' %}"
-                            class="owl-carousel-image img-fluid" alt="">
+                        <img src="{{ betara.image }}" class="owl-carousel-image img-fluid" alt="" style="height: 500px; width: 330px;">
 
                         <div class="owl-carousel-info">
                             <h4 class="mb-2">
-                                Candice
+                                <a href="{% url 'detailbetara' betara.id %}" class="btn btn-success">{{ betara.nama }}</a>
                                 <img src="{% static 'images/verified.png' %}" class="owl-carousel-verified-image img-fluid"
                                     alt="">
                             </h4>
 
-                            <span class="badge">Storytelling</span>
+                            <span class="badge">{{ betara.jenis }}</span>
 
-                            <span class="badge">Business</span>
                         </div>
 
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-                            </ul>
-                        </div>
+                        
                     </div>
+                    {% endfor %}
+                    
 
-                    <div class="owl-carousel-info-wrap item">
-                        <img src="{% static 'images/profile/handsome-asian-man-listening-music-through-headphones.jpg' %}"
-                            class="owl-carousel-image img-fluid" alt="">
-
-                        <div class="owl-carousel-info">
-                            <h4 class="mb-2">
-                                William
-                                <img src="{% static 'images/verified.png' %}" class="owl-carousel-verified-image img-fluid"
-                                    alt="">
-                            </h4>
-
-                            <span class="badge">Creative</span>
-
-                            <span class="badge">Design</span>
-                        </div>
-
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-pinterest"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="owl-carousel-info-wrap item">
-                        <img src="{% static 'images/profile/cute-smiling-woman-outdoor-portrait.jpg' %}"
-                            class="owl-carousel-image img-fluid" alt="">
-
-                        <div class="owl-carousel-info">
-                            <h4 class="mb-2">Taylor</h4>
-
-                            <span class="badge">Modeling</span>
-
-                            <span class="badge">Fashion</span>
-                        </div>
-
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-pinterest"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="owl-carousel-info-wrap item">
-                        <img src="{% static 'images/profile/man-portrait.jpg' %}" class="owl-carousel-image img-fluid" alt="">
-
-                        <div class="owl-carousel-info">
-                            <h4 class="mb-2">Nick</h4>
-
-                            <span class="badge">Acting</span>
-                        </div>
-
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-youtube"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="owl-carousel-info-wrap item">
-                        <img src="{% static 'images/profile/woman-posing-black-dress-medium-shot.jpg' %}"
-                            class="owl-carousel-image img-fluid" alt="">
-
-                        <div class="owl-carousel-info">
-                            <h4 class="mb-2">
-                                Elsa
-                                <img src="{% static 'images/verified.png' %}" class="owl-carousel-verified-image img-fluid"
-                                    alt="">
-                            </h4>
-
-                            <span class="badge">Influencer</span>
-                        </div>
-
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-youtube"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="owl-carousel-info-wrap item">
-                        <img src="{% static 'images/profile/smart-attractive-asian-glasses-male-standing-smile-with-freshness-joyful-casual-blue-shirt-portrait-white-background.jpg' %}"
-                            class="owl-carousel-image img-fluid" alt="">
-
-                        <div class="owl-carousel-info">
-                            <h4 class="mb-2">Chan</h4>
-
-                            <span class="badge">Education</span>
-                        </div>
-
-                        <div class="social-share">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-linkedin"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                 </div>
+               
             </div>
 
         </div>

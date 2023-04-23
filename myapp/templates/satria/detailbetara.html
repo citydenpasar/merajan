@@ -24,11 +24,22 @@
 <body>
     <main>
         {% include "satria/navbar.html" %}
-        {% include "satria/pemangku.html" %}
-        {% include "satria/betara.html" %}
-        {% include "satria/kepemangkuan.html" %}
-        {% include "satria/komentar.html" %}
-        
+        <section class="hero-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 col-12">
+                  <div class="text-center mb-5 pb-2">
+                    <h1 class="text-white"></h1>
+          
+                    <p class="text-white">{{ item.nama }}</p>
+                    <img class="m-4" src="{{ item.image }}" style="float: left" alt="" height="400px" weight="400px"/>
+                    <p class="text-black">Pejelasan {{ item.nama }}</p>
+                    <p class="text-black" align="justify">{{ item.penjelasan }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
 
     </main>

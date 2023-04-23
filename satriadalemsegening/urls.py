@@ -20,4 +20,7 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="halaman_awal"),
+    path('tambah_balasan/<int:komentar_id>/', views.index, name='tambah_balasan'),
+    path('purnama/', views.purnama, name="purnama"),
+    path('<int:betara_id>/',views.detailbetara, name='detailbetara'),
 ]

@@ -163,7 +163,7 @@ strong {
   border-radius: var(--border-radius-large);
   display: inline-block;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   margin-bottom: 0;
   padding: 10px 25px;
 }
@@ -175,7 +175,7 @@ strong {
 
 main {
   position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 
 .section-bg {
@@ -271,7 +271,7 @@ main {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 9;
+  z-index: -1;
   padding-top: 20px;
   padding-bottom: 20px;
 }

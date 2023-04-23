@@ -43,11 +43,18 @@ https://templatemo.com/tm-584-pod-talk
 
     <main>
 
-        {% include "satria/navbar.html" %}
-        
-        {% block body %}
+        {% include 'satria/navbarbiasa.html' %}
+        <section>
+            <div class="container">
+                <div class="row">
+                    {% block body %}
     
-        {% endblock body %}
+                    {% endblock body %} 
+                </div>
+            </div>
+           
+        </section>
+        
         
 
        
