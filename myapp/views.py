@@ -46,6 +46,14 @@ def detailbetara(request,betara_id):
     }
     return render(request,'satria/detailbetara.html',context)
 
+def tambah_komentar(request):
+    if request.method == 'POST':
+        nama = request.POST['nama']
+        isi_komentar = request.POST['isi_komentar']
+        komentar = Komentar(nama=nama, isi_komentar=isi_komentar)
+        komentar.save()
+    return HttpResponseRedirect('/#komentar')
+
 def edit_komentar(request, komentar_id):
     komentar = get_object_or_404(Komentar, id=komentar_id)
     parent_komentar = komentar.parent

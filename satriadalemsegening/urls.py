@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="halaman_awal"),
     path('tambah_balasan/<int:komentar_id>/', views.index, name='tambah_balasan'),
+    path('tambah-komentar/', views.tambah_komentar, name='tambah_komentar'),
     path('purnama/', views.purnama, name="purnama"),
     path('tilem/', views.tilem, name="tilem"),
     path('odalan/', views.odalan, name="odalan"),
