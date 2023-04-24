@@ -1,5 +1,5 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" >
     <div class="container">
         <a class="navbar-brand me-lg-5 me-0" href="{% url 'halaman_awal' %}">
             <img src="{% static 'images/merajan.png' %}" class="logo-image img-fluid" alt="templatemo pod talk">
@@ -28,24 +28,24 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'halaman_awal' %}#betara" href="#betara">Betara</a>
+                    <a class="text-black nav-link" href="{% url 'halaman_awal' %}#betara" href="#betara">Betara</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                    <a class="text-black nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">Kepemangkuan</a>
 
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item" href="listing-page.html">Purnama</a></li>
+                        <li><a class="dropdown-item" href="{% url 'purnama' %}">Purnama</a></li>
 
-                        <li><a class="dropdown-item" href="detail-page.html">Tilem</a></li>
-                        <li><a class="dropdown-item" href="detail-page.html">Odalan</a></li>
-                        <li><a class="dropdown-item" href="detail-page.html">Galungan&Kuningan</a></li>
+                        <li><a class="dropdown-item" href="{% url 'tilem' %}">Tilem</a></li>
+                        <li><a class="dropdown-item" href="{% url 'odalan' %}">Odalan</a></li>
+                        <li><a class="dropdown-item" href="{% url 'galungan' %}">Galungan&Kuningan</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#kontak">Contact</a>
+                    <a class="text-black nav-link" href="#kontak">Contact</a>
                 </li>
             </ul>
 

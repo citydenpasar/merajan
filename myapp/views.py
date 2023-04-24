@@ -26,6 +26,18 @@ def purnama(request):
     context = {}
     
     return render(request, 'satria/KPK-Purnama.html', context)
+def tilem(request):
+    context = {}
+    
+    return render(request, 'satria/KPK-Tilem.html', context)
+def galungan(request):
+    context = {}
+    
+    return render(request, 'satria/KPK-galungan.html', context)
+def odalan(request):
+    context = {}
+    
+    return render(request, 'satria/KPK-odalan.html', context)
 
 def detailbetara(request,betara_id):
     item = Betara.objects.get(pk=betara_id)
@@ -45,13 +57,13 @@ def edit_komentar(request, komentar_id):
             komentar = form.save(commit=False)
             komentar.parent = parent_komentar
             komentar.save()
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/#komentar')
     else:
         form = KomentarForm(instance=komentar)
 
-    return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/#komentar')
 
 def delete_komentar(request, komentar_id):
     komentar = get_object_or_404(Komentar, id=komentar_id)
     komentar.delete()
-    return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/#komentar')
