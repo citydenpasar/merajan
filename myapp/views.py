@@ -34,4 +34,24 @@ def detailbetara(request,betara_id):
     }
     return render(request,'satria/detailbetara.html',context)
 
+def edit_komentar(request, komentar_id):
+    komentar = get_object_or_404(Komentar, id=komentar_id)
+    parent_komentar = komentar.parent
 
+    if request.method == 'POST':
+        form = KomentarForm(request.POST, instance=komentar)
+
+        if form.is_valid():
+            komentar = form.save(commit=False)
+            komentar.parent = parent_komentar
+            komentar.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = KomentarForm(instance=komentar)
+
+    return HttpResponseRedirect('/')
+
+def delete_komentar(request, komentar_id):
+    komentar = get_object_or_404(Komentar, id=komentar_id)
+    komentar.delete()
+    return HttpResponseRedirect('/')

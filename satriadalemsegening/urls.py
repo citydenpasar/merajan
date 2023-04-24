@@ -23,4 +23,6 @@ urlpatterns = [
     path('tambah_balasan/<int:komentar_id>/', views.index, name='tambah_balasan'),
     path('purnama/', views.purnama, name="purnama"),
     path('<int:betara_id>/',views.detailbetara, name='detailbetara'),
+    path('edit-komentar/<int:komentar_id>/', views.edit_komentar, name='edit_komentar'),
+    path('delete-komentar/<int:komentar_id>/', views.delete_komentar, name='delete_komentar'),
 ]
